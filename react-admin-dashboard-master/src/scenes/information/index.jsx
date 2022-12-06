@@ -4,11 +4,12 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "../../components/Header";
 import { useTheme, Box } from "@mui/material";
 import { tokens } from "../../theme";
+import "./index.css";
 const Information = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID"},
     {
       field: "plates",
       headerName: "NumberPlate",
@@ -47,6 +48,7 @@ const Information = () => {
   var [ccdata, setccdata] = useState([]);
 
   //  setInterval(() => {
+useEffect(() => {
   async function fetchItems() {
     axios
       .get("http://localhost:4000/fetchall")
@@ -60,7 +62,12 @@ const Information = () => {
         console.log(error);
       });
   }
-  fetchItems();
+  const interval = setInterval(() => {
+    fetchItems();
+  }, 2000);
+  
+  return () => clearInterval(interval);
+}, []);
   return (
     // <div>{ccdata && ccdata.map((ccdata,index)=><li key={index}>{ccdata.plates}</li>)}</div>
     <Box m="20px">
@@ -82,15 +89,15 @@ const Information = () => {
             color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: colors.redAccent[800],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
+            backgroundColor: colors.grey[800],
           },
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
+            backgroundColor: colors.redAccent[800],
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
@@ -101,9 +108,15 @@ const Information = () => {
         }}
       >
         <DataGrid
+          initialState={{
+            sorting: {
+              sortModel: [{ field: 'id', sort: 'desc' }],
+            },
+          }}
           rows={ccdata}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
+          
         />
       </Box>
     </Box>
