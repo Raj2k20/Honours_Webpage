@@ -1,0 +1,23 @@
+.MuiDataGrid-cellContent{
+    font-size: 1.25rem;
+}
+.MuiDataGrid-columnHeaderTitleContainer{
+    font-size: 1.25rem;
+}
+.MuiDataGrid-footerContainer{
+    font-size: 1.25rem !important;
+}
+.MuiButton-text{
+    font-size: 1rem !important;
+}
+.MuiDataGrid-toolbarContainer{
+    font-size: 4rem !important;
+    color : white
+}
+.css-13qp4b7-MuiButtonBase-root-MuiButton-root{
+    color: white !important;
+}
+.css-1gyedci-MuiFormLabel-root-MuiInputLabel-root{
+    font-size: 1rem !important;
+    color: black !important;
+}
