@@ -11,7 +11,7 @@ export const tokens = (mode) => ({
           500: "#666666",
           600: "#525252",
           700: "#3d3d3d",
-          800: "#292929",
+          800: "#2a2a2a",
           900: "#141414",
         },
         primary: {
@@ -23,7 +23,7 @@ export const tokens = (mode) => ({
           600: "#101624",
           700: "#0c101b",
           800: "#080b12",
-          900: "#040509",
+          900: "#000000",
         },
         greenAccent: {
           100: "#dbf5ee",
@@ -44,7 +44,7 @@ export const tokens = (mode) => ({
           500: "#db4f4a",
           600: "#af3f3b",
           700: "#832f2c",
-          800: "#58201e",
+          800: "#724fef",
           900: "#2c100f",
         },
         blueAccent: {
@@ -56,7 +56,7 @@ export const tokens = (mode) => ({
           600: "#535ac8",
           700: "#3e4396",
           800: "#2a2d64",
-          900: "#151632",
+          900: "#2a2a2a",
         },
       }
     : {
@@ -68,7 +68,7 @@ export const tokens = (mode) => ({
           500: "#666666",
           600: "#858585",
           700: "#a3a3a3",
-          800: "#c2c2c2",
+          800: "#e5e76c",
           900: "#e0e0e0",
         },
         primary: {
@@ -87,7 +87,7 @@ export const tokens = (mode) => ({
           200: "#1e5245",
           300: "#2e7c67",
           400: "#3da58a",
-          500: "#4cceac",
+          500: "#e5e76c",
           600: "#70d8bd",
           700: "#94e2cd",
           800: "#b7ebde",
@@ -101,7 +101,7 @@ export const tokens = (mode) => ({
           500: "#db4f4a",
           600: "#e2726e",
           700: "#e99592",
-          800: "#f1b9b7",
+          800: "#b19af5",
           900: "#f8dcdb",
         },
         blueAccent: {
@@ -113,7 +113,7 @@ export const tokens = (mode) => ({
           600: "#868dfb",
           700: "#a4a9fc",
           800: "#c3c6fd",
-          900: "#e1e2fe",
+          900: "#e5e76c",
         },
       }),
 });
@@ -136,7 +136,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100],
             },
             background: {
-              default: colors.primary[500],
+              default: colors.primary[900],
             },
           }
         : {
@@ -165,11 +165,11 @@ export const themeSettings = (mode) => {
       },
       h2: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-        fontSize: 32,
+        fontSize: 70,
       },
       h3: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-        fontSize: 24,
+        fontSize: 50,
       },
       h4: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
@@ -177,7 +177,7 @@ export const themeSettings = (mode) => {
       },
       h5: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-        fontSize: 16,
+        fontSize: 26,
       },
       h6: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
